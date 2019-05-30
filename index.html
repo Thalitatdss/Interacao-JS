@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interação com JS</title>
+</head>
+<body>
+<div id="container">
+<h2>Inperação com java script</h2>
+</div>
+
+<div class="btn">
+<button onclick="ativa()">Enviar</button>
+<button onclick="desativa()">Cancelar</button>
+</div>
+
+
+<script>
+let img = document.querySelector("#container");
+let creation = document.createElement("img");
+let corpo = document.querySelector("body");
+let titulo=document.querySelector("h2");
+
+function ativa(){
+titulo.style.color="white";
+corpo.style.backgroundColor="black";
+creation.src ="img/dog.jpg";
+creation.style.width="200px";
+img.appendChild(creation);
+}
+
+
+function desativa(){
+creation.src ="img/erro.png";
+creation.style.whidt="200px";
+img.appendChild(creation);
+}
+
+</script>
+</body>
+</html>
+
